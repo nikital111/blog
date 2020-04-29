@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 18px;
+  button {
+    background: blue;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    padding: 5px 25px;
+    cursor: pointer;
+  }
+}

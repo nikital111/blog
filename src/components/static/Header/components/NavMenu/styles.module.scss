@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+
+  li {
+    list-style: none;
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 5px 25px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+
+.active {
+  background: #ed0808fa;
+}
