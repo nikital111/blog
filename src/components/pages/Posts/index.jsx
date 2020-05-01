@@ -5,11 +5,7 @@ import List from "./components/List";
 import Nav from "./components/Nav";
 import PostForm from "./components/PostForm";
 import {
-  fetchCreatePostAction,
   fetchListPostsAction,
-  fetchRemovePostAction,
-  fetchEditPostAction,
-  initialPostAction
 } from "./redux/actions";
 
 const Posts = props => {

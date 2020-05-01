@@ -89,7 +89,6 @@ const PostForm = props => {
 
 PostForm.propTypes = {
   post: PropTypes.shape({
-    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     status: PropTypes.bool.isRequired,
     seo_url: PropTypes.string.isRequired,
