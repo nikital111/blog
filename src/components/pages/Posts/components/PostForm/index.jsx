@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Btn from "components/shared/Btn";
+import Btn from "../../../../shared/Btn";
 import { toggleFormAction } from "../../redux/actionTypes";
 import {
   fetchCreatePostAction,

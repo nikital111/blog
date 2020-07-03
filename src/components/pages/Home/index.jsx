@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-const Home = props => {
+const Home = (props) => {
   const { title, description } = props;
   return (
     <>
@@ -14,13 +14,13 @@ const Home = props => {
 
 Home.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     title: state.home.title,
-    description: state.home.description
+    description: state.home.description,
   };
 };
 
