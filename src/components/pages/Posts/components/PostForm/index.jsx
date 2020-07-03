@@ -5,24 +5,24 @@ import Btn from "../../../../shared/Btn";
 import { toggleFormAction } from "../../redux/actionTypes";
 import {
   fetchCreatePostAction,
-  fetchEditPostAction,
+  fetchEditPostAction
 } from "../../redux/actions";
 
 import styles from "./styles.module.scss";
 
-const PostForm = (props) => {
+const PostForm = props => {
   const { isShowForm, closeForm, editPost, createPost, post } = props;
 
   if (!isShowForm) {
     return null;
   }
 
-  const onSubmitEdit = (e) => {
+  const onSubmitEdit = e => {
     e.preventDefault();
     editPost(e.target, post.id);
   };
 
-  const onSubmitCreate = (e) => {
+  const onSubmitCreate = e => {
     e.preventDefault();
     createPost(e.target);
   };
@@ -33,7 +33,7 @@ const PostForm = (props) => {
     short_description: shortDescription,
     full_description: fullDescription,
     status,
-    seo_url: seoUrl,
+    seo_url: seoUrl
   } = post;
 
   const onSubmit = id ? onSubmitEdit : onSubmitCreate;
@@ -96,25 +96,25 @@ PostForm.propTypes = {
     status: PropTypes.bool.isRequired,
     seo_url: PropTypes.string.isRequired,
     short_description: PropTypes.string.isRequired,
-    full_description: PropTypes.string.isRequired,
+    full_description: PropTypes.string.isRequired
   }).isRequired,
   isShowForm: PropTypes.bool.isRequired,
   closeForm: PropTypes.func.isRequired,
   editPost: PropTypes.func.isRequired,
-  createPost: PropTypes.func.isRequired,
+  createPost: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    isShowForm: state.posts.isShowForm,
+    isShowForm: state.posts.isShowForm
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     closeForm: () => dispatch(toggleFormAction(false, true)),
-    createPost: (data) => fetchCreatePostAction(data, dispatch),
-    editPost: (data, postId) => fetchEditPostAction(data, postId, dispatch),
+    createPost: data => fetchCreatePostAction(data, dispatch),
+    editPost: (data, postId) => fetchEditPostAction(data, postId, dispatch)
   };
 };
 

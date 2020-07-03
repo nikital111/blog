@@ -7,7 +7,7 @@ import Item from "../Item";
 import styles from "./styles.module.scss";
 
 const List = ({ posts, removePost, editPost }) => {
-  const postsList = posts.map((post) => {
+  const postsList = posts.map(post => {
     return (
       <Item
         key={post.id}
@@ -24,12 +24,12 @@ const List = ({ posts, removePost, editPost }) => {
 List.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object).isRequired,
   removePost: PropTypes.func.isRequired,
-  editPost: PropTypes.func.isRequired,
+  editPost: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  editPost: (post) => dispatch(editPostAction(post)),
-  removePost: (key) => fetchRemovePostAction(key, dispatch),
+const mapDispatchToProps = dispatch => ({
+  editPost: post => dispatch(editPostAction(post)),
+  removePost: key => fetchRemovePostAction(key, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(List);

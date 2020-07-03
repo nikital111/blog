@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import Btn from "../../../../shared/Btn";
 import styles from "./styles.module.scss";
 
-const Item = (props) => {
+const Item = props => {
   const { post, removePost, editPost } = props;
   const {
     id,
     title,
     short_description: shortDescription,
-    date_update: { date },
+    date_update: { date }
   } = post;
 
   const dateValue = new Date(date).toLocaleDateString();
@@ -33,10 +33,10 @@ Item.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     date_update: PropTypes.object.isRequired,
-    short_description: PropTypes.string.isRequired,
+    short_description: PropTypes.string.isRequired
   }).isRequired,
   removePost: PropTypes.func.isRequired,
-  editPost: PropTypes.func.isRequired,
+  editPost: PropTypes.func.isRequired
 };
 
 export default Item;

@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 import PostForm from "./components/PostForm";
 import { fetchListPostsAction } from "./redux/actions";
 
-const Posts = (props) => {
+const Posts = props => {
   const { post, posts, isShowForm, fetchListPosts } = props;
 
   useEffect(() => {
@@ -34,16 +34,16 @@ const Posts = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     post: state.posts.post,
-    posts: state.posts.dataPosts,
+    posts: state.posts.dataPosts
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    fetchListPosts: () => fetchListPostsAction(dispatch),
+    fetchListPosts: () => fetchListPostsAction(dispatch)
   };
 };
 
